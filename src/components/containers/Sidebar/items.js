@@ -1,26 +1,26 @@
 const items = [
   {
     label: "MAIN",
-    cards: [
+    items: [
       {
         label: "Dashboard",
         id: "dashboard",
         icon: "bi bi-graph-up",
         href: "#",
-        items: [],
+        sub_menus: [],
       },
       {
         label: "Calendar",
         id: "calendar",
         icon: "bi bi-graph-up",
         href: "#",
-        items: [],
+        sub_menus: [],
       },
       {
         label: "Email",
         id: "email",
         icon: "bi bi-envelope",
-        items: [
+        sub_menus: [
           {
             label: "Inbox",
             href: "#",
