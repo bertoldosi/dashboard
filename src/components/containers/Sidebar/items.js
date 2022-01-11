@@ -6,14 +6,14 @@ const items = [
         label: "Dashboard",
         id: "dashboard",
         icon: "bi bi-graph-up",
-        href: "#",
+        href: "/",
         sub_menus: [],
       },
       {
         label: "Calendar",
         id: "calendar",
         icon: "bi bi-graph-up",
-        href: "#",
+        href: "/calendar",
         sub_menus: [],
       },
       {
@@ -23,17 +23,29 @@ const items = [
         sub_menus: [
           {
             label: "Inbox",
-            href: "#",
+            href: "email/inbox",
           },
 
           {
             label: "Email Read",
-            href: "#",
+            href: "email/read",
           },
 
           {
             label: "Email Compose",
-            href: "#",
+            href: "email/compose",
+          },
+        ],
+      },
+
+      {
+        label: "Email 2",
+        id: "email2",
+        icon: "bi bi-envelope",
+        sub_menus: [
+          {
+            label: "Inbox2",
+            href: "email/inbox2",
           },
         ],
       },
