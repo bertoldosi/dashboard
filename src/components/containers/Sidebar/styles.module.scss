@@ -1,34 +1,15 @@
-.Container {
+.Sidebar {
   width: 29.05rem;
   height: 100vh;
   background-color: var(--bs-sidebar-dark);
+  color: var(--col-sidebar);
+  font-size: 1.57rem;
 
-  header {
+  &Header {
     height: 7rem;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  &Menu {
-    color: #b4c9de;
-    &Card {
-      &Title {
-        width: 100%;
-        padding: 1.2rem 2rem;
-      }
-
-      &Item {
-        padding: 0;
-
-        &Title {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 1.2rem 2rem;
-          background-color: var(--bs-sidebar-item-dark);
-        }
-      }
-    }
+    font-size: 3rem;
   }
 }

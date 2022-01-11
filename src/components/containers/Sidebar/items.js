@@ -1,7 +1,7 @@
 const items = [
   {
     label: "MAIN",
-    items: [
+    menus: [
       {
         label: "Dashboard",
         id: "dashboard",

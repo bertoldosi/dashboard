@@ -1,8 +1,10 @@
+import React from "react";
 import styles from "./styles.module.scss";
+import itemsSidebar from "./items";
+import { ItemSidebar } from "./components";
 
-const Menu = ({ menus }) => {};
-const MenuItem = ({ menuItems }) => {};
-const MenuItemSubMenu = ({ subMenus }) => {};
+const iconChevronDown = "bi bi-chevron-down";
+const iconChevronUp = "bi bi-chevron-up";
 
 function Sidebar() {
   return (
@@ -10,45 +12,9 @@ function Sidebar() {
       <header className={styles.SidebarHeader}>Veltrix</header>
 
       <ul className={styles.SidebarContent}>
-        <div className={styles.SidebarContentMenu}>
-          <li className={styles.SidebarContentMenuTitle}>MAIN</li>
-
-          <li className={styles.SidebarContentMenuItem}>
-            <a className={styles.ContainerMenuCardItemTag}>
-              <i className="bi bi-graph-up"></i>
-              <span>Dashboard</span>
-              <i className="bi bi-chevron-down"></i>
-            </a>
-          </li>
-
-          <li className={styles.SidebarContentMenuItem}>
-            <a className={styles.ContainerMenuCardItemTag}>
-              <i className="bi bi-calendar4"></i>
-              <span>Calendar</span>
-              <i className="bi bi-chevron-down"></i>
-            </a>
-          </li>
-
-          <li className={styles.SidebarContentMenuItem}>
-            <a className={styles.ContainerMenuCardItemTag}>
-              <i className="bi bi-envelope"></i>
-              <span>Email</span>
-              <i className="bi bi-chevron-down"></i>
-            </a>
-
-            <ul className={styles.SidebarContentMenuItemSubMenu}>
-              <li>
-                <a href="#">Inbox</a>
-              </li>
-              <li>
-                <a href="#">Email Read</a>
-              </li>
-              <li>
-                <a href="#">Email Compose</a>
-              </li>
-            </ul>
-          </li>
-        </div>
+        {itemsSidebar.map((item, key) => (
+          <ItemSidebar item={item} key={key} />
+        ))}
       </ul>
     </aside>
   );
