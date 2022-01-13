@@ -12,7 +12,7 @@ const items = [
       {
         label: "Calendar",
         id: "calendar",
-        icon: "bi bi-graph-up",
+        icon: "bi bi-calendar",
         href: "/calendar",
         sub_menus: [],
       },
@@ -37,15 +37,31 @@ const items = [
           },
         ],
       },
+    ],
+  },
 
+  {
+    label: "COMPONENTS",
+    menus: [
       {
-        label: "Email 2",
-        id: "email2",
-        icon: "bi bi-envelope",
+        label: "UI Elements",
+        id: "elementes",
+        icon: "bi bi-box-seam",
+        href: "/",
         sub_menus: [
           {
-            label: "Inbox2",
-            href: "email/inbox2",
+            label: "Alerts",
+            href: "#",
+          },
+
+          {
+            label: "Buttons",
+            href: "#",
+          },
+
+          {
+            label: "Cards",
+            href: "#",
           },
         ],
       },

@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./styles.module.scss";
-import itemsSidebar from "./items";
+import { AppContext } from "../../../contexts/AppProvider";
+
 import { ItemSidebar } from "./components";
+import itemsSidebar from "./items";
 
 function Sidebar() {
-  return (
-    <aside className={styles.Sidebar}>
-      <header className={styles.SidebarHeader}>Veltrix</header>
+  const { showSidebar } = useContext(AppContext);
 
+  return (
+    <aside className={showSidebar ? styles.SidebarShow : styles.Sidebar}>
       <ul className={styles.SidebarContent}>
         {itemsSidebar.map((item, key) => (
           <ItemSidebar item={item} key={key} />

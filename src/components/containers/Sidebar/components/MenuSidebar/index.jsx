@@ -36,17 +36,17 @@ export const MenuSidebar = ({ menu }) => {
         )}
       </a>
 
-      {(menu.id === menuToggle?.id) & menuToggle.openSubMenu ? (
-        <ul className={styles.ItemSubMenu}>
-          {menu.sub_menus.map((subMenu, index) => (
-            <li key={index}>
-              <a href={subMenu.href}>{subMenu.label}</a>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        ""
-      )}
+      <ul
+        className={
+          menuToggle.openSubMenu ? styles.ItemSubMenuActive : styles.ItemSubMenu
+        }
+      >
+        {menu.sub_menus.map((subMenu, index) => (
+          <li key={index}>
+            <a href={subMenu.href}>{subMenu.label}</a>
+          </li>
+        ))}
+      </ul>
     </li>
   );
 };

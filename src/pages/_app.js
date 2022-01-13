@@ -1,5 +1,6 @@
 import "../styles/globals.scss";
 import "bootstrap-icons/font/bootstrap-icons.scss";
+import { AppProvider } from "../contexts/AppProvider";
 
 import Head from "next/head";
 
@@ -22,14 +23,16 @@ const Html = () => (
 
 function MyApp({ Component, pageProps }) {
   return (
-    <main className={styles.Main}>
-      <Sidebar />
-      <div className={styles.MainContainer}>
-        <Html />
+    <AppProvider initialData={pageProps?.initialData}>
+      <main className={styles.Main}>
         <Header />
-        <Component {...pageProps} />
-      </div>
-    </main>
+        <div className={styles.MainContainer}>
+          <Html />
+          <Sidebar />
+          <Component {...pageProps} />
+        </div>
+      </main>
+    </AppProvider>
   );
 }
 

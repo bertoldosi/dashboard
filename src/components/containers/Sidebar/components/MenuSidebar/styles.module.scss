@@ -1,3 +1,5 @@
+@import "../../../../../styles/mixins";
+
 .Item {
   &Tag {
     display: flex;
@@ -26,20 +28,29 @@
   }
 
   &SubMenu {
-    list-style: none;
-    padding: 0 2rem;
+    display: none;
 
-    li {
-      a {
-        text-decoration: none;
-        padding: 0.4rem 1.5rem 0.4rem 3.3rem;
-        color: var(--col-sidebar);
-        cursor: pointer;
+    &Active {
+      display: block;
+      list-style: none;
+      padding: 0 2rem;
 
-        &:hover {
-          color: var(--col-sidebar-hover);
+      li {
+        a {
+          text-decoration: none;
+          padding: 0.4rem 1.5rem 0.4rem 3.3rem;
+          color: var(--col-sidebar);
+          user-select: none;
+          cursor: pointer;
+
+          &:hover {
+            color: var(--col-sidebar-hover);
+          }
         }
       }
     }
   }
+}
+
+@include medium-screen {
 }
