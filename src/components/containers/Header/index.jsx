@@ -1,19 +1,17 @@
 import { ToggleBar } from "./components";
 
-import styles from "./styles.module.scss";
+import { Container, MenuBar, MenuContent } from "./style";
 
 function Header() {
   return (
-    <header className={styles.Container}>
-      <div className={styles.ContainerLogo} />
+    <Container>
+      {/* <divontainerLogo} /> */}
 
-      <div className={styles.ContainerHeader}>
-        <div className={styles.ContainerHeaderLeft}>
-          <ToggleBar />
-        </div>
-        <div className={styles.ContainerHeaderRigth}></div>
-      </div>
-    </header>
+      <MenuBar>
+        <ToggleBar />
+        <MenuContent />
+      </MenuBar>
+    </Container>
   );
 }
 

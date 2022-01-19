@@ -1,21 +1,59 @@
-import React, { useContext } from "react";
-import styles from "./styles.module.scss";
-import { AppContext } from "../../../contexts/AppProvider";
+import React /*{ useContext }*/ from "react";
+// import { AppContext } from "../../../contexts/AppProvider";
 
-import { ItemSidebar } from "./components";
-import itemsSidebar from "./items";
+import { Container, Title, MenuTitle, MenuSub } from "./style";
+
+import {
+  AiOutlineHome,
+  AiOutlineCalendar,
+  AiOutlineMail,
+} from "react-icons/ai";
 
 function Sidebar() {
-  const { showSidebar } = useContext(AppContext);
+  // const { showSidebar } = useContext(AppContext);
 
   return (
-    <aside className={showSidebar ? styles.SidebarShow : styles.Sidebar}>
-      <ul className={styles.SidebarContent}>
-        {itemsSidebar.map((item, key) => (
-          <ItemSidebar item={item} key={key} />
-        ))}
+    <Container>
+      <Title>Main</Title>
+
+      <ul>
+        <MenuTitle href="#">
+          <AiOutlineHome />
+          <span>Email</span>
+        </MenuTitle>
+
+        <MenuSub id="teste">
+          <li>
+            <a href="email-inbox.html">Inbox</a>
+          </li>
+          <li>
+            <a href="email-read.html">Email Read</a>
+          </li>
+          <li>
+            <a href="email-compose.html">Email Compose</a>
+          </li>
+        </MenuSub>
       </ul>
-    </aside>
+
+      {/* <ul>
+        <MenuTitle href="#">
+          <AiOutlineMail />
+          <span>Email</span>
+        </MenuTitle>
+
+        <MenuSub id="teste">
+          <li>
+            <a href="email-inbox.html">1</a>
+          </li>
+          <li>
+            <a href="email-read.html">2</a>
+          </li>
+          <li>
+            <a href="email-compose.html">3</a>
+          </li>
+        </MenuSub>
+      </ul> */}
+    </Container>
   );
 }
 

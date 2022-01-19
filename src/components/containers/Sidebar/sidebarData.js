@@ -1,4 +1,4 @@
-const items = [
+const sidebarData = [
   {
     label: "MAIN",
     menus: [
@@ -69,4 +69,4 @@ const items = [
   },
 ];
 
-export default items;
+export default sidebarData;

@@ -1,38 +1,24 @@
-import "../styles/globals.scss";
-import "bootstrap-icons/font/bootstrap-icons.scss";
 import { AppProvider } from "../contexts/AppProvider";
-
-import Head from "next/head";
-
-import styles from "./styles.module.scss";
+import GlobalStyle from "../styles/globalStyles";
+import { Container, Content } from "./style";
 
 import Header from "../components/containers/Header";
 import Sidebar from "../components/containers/Sidebar";
 
-const Html = () => (
-  <Head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossOrigin="anonymous"
-    />
-  </Head>
-);
-
 function MyApp({ Component, pageProps }) {
   return (
-    <AppProvider initialData={pageProps?.initialData}>
-      <main className={styles.Main}>
-        <Header />
-        <div className={styles.MainContainer}>
-          <Html />
-          <Sidebar />
-          <Component {...pageProps} />
-        </div>
-      </main>
-    </AppProvider>
+    <>
+      <GlobalStyle />
+      <AppProvider initialData={pageProps?.initialData}>
+        <Container>
+          <Header />
+          <Content>
+            <Sidebar />
+            <Component {...pageProps} />
+          </Content>
+        </Container>
+      </AppProvider>
+    </>
   );
 }
 

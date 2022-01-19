@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AppContext } from "../../../../../contexts/AppProvider";
 
-import styles from "./styles.module.scss";
+import { Container, Trace } from "./style";
 
 export const ToggleBar = () => {
   const { showSidebar, setShowSidebar } = useContext(AppContext);
@@ -11,10 +11,10 @@ export const ToggleBar = () => {
   };
 
   return (
-    <div className={styles.Container} onClick={handleOnSidebar}>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+    <Container onClick={handleOnSidebar}>
+      <Trace></Trace>
+      <Trace></Trace>
+      <Trace></Trace>
+    </Container>
   );
 };
