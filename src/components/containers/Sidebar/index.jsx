@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { useRouter } from "next/router";
+import itemsSidebar from "./itemsSidebar";
 import { AppContext } from "../../../contexts/AppProvider";
 
 import {
@@ -9,57 +10,22 @@ import {
   StyleSubMenu,
 } from "./styles";
 
-import {
-  BsChevronDown,
-  BsChevronUp,
-  BsEnvelope,
-  BsCalendar,
-  BsGraphUp,
-} from "react-icons/bs";
-
-const sidebar = [
-  {
-    id: "dashboard",
-    title: "Dashboard",
-    icon: <BsGraphUp />,
-    submenus: [
-      { title: "Inbox" },
-      { title: "Email Read" },
-      { title: "Chat Compose" },
-    ],
-  },
-
-  {
-    id: "email",
-    title: "Email",
-    icon: <BsEnvelope />,
-    submenus: [
-      { title: "item01" },
-      { title: "item02 item" },
-      { title: "item03 item item" },
-    ],
-  },
-
-  {
-    id: "semsub",
-    title: "Sem sub",
-    icon: <BsCalendar />,
-    href: "/page",
-    submenus: [],
-  },
-];
+import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 
 function Sidebar() {
   const router = useRouter();
   const { toggleHideMenubar } = useContext(AppContext);
 
   const [dataSidebar, setDataSidebar] = React.useState(
-    sidebar.map((item) => {
+    itemsSidebar.map((item) => {
       return {
         ...item,
-        showTitle: false,
-        showSubmenus: false,
-        isSubmenus: item.submenus.length > 0,
+        menus: item.menus.map((menu) => ({
+          ...menu,
+          showTitle: false,
+          showSubmenus: false,
+          isSubmenus: menu.submenus.length > 0,
+        })),
       };
     })
   );
@@ -67,11 +33,16 @@ function Sidebar() {
   const submenusExpanded = (itemId) => {
     setDataSidebar(
       dataSidebar.map((item) => {
-        if (itemId === item.id) {
-          return { ...item, showSubmenus: !item.showSubmenus };
-        } else {
-          return item;
-        }
+        return {
+          ...item,
+          menus: item.menus.map((menu) => {
+            if (itemId === menu.id) {
+              return { ...menu, showSubmenus: !menu.showSubmenus };
+            } else {
+              return menu;
+            }
+          }),
+        };
       })
     );
   };
@@ -82,31 +53,34 @@ function Sidebar() {
 
   return (
     <StyleContainer hideSidebar={toggleHideMenubar}>
-      <StyleTitle>Main</StyleTitle>
+      {dataSidebar.map(({ menus, title }) => (
+        <ul key={title}>
+          <StyleTitle>{title}</StyleTitle>
+          {menus.map((menu) => (
+            <ul key={menu.id}>
+              <StyleMenuTitle
+                onClick={() =>
+                  menu.isSubmenus
+                    ? submenusExpanded(menu.id)
+                    : redirectPage(menu?.href)
+                }
+              >
+                {menu.icon}
+                <span>{menu.title}</span>
+                {menu.isSubmenus &&
+                  (menu.showSubmenus ? <BsChevronUp /> : <BsChevronDown />)}
+              </StyleMenuTitle>
 
-      {dataSidebar.map((item) => (
-        <ul key={item.id}>
-          <StyleMenuTitle
-            onClick={() =>
-              item.isSubmenus
-                ? submenusExpanded(item.id)
-                : redirectPage(item?.href)
-            }
-          >
-            {item.icon}
-            <span>{item.title}</span>
-            {item.isSubmenus &&
-              (item.showSubmenus ? <BsChevronUp /> : <BsChevronDown />)}
-          </StyleMenuTitle>
-
-          {item.showSubmenus &&
-            item.submenus.map((submenu) => (
-              <StyleSubMenu key={submenu.title}>
-                <li>
-                  <a href="">{submenu.title}</a>
-                </li>
-              </StyleSubMenu>
-            ))}
+              {menu.showSubmenus &&
+                menu.submenus.map((submenu) => (
+                  <StyleSubMenu key={submenu.title}>
+                    <li>
+                      <a href="#">{submenu.title}</a>
+                    </li>
+                  </StyleSubMenu>
+                ))}
+            </ul>
+          ))}
         </ul>
       ))}
     </StyleContainer>

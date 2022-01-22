@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import ToggleMenubar from "../../common/ToggleMenubar";
+import ToggleMenubar from "./components/ToggleMenubar";
 import { AppContext } from "../../../contexts/AppProvider";
 
 import {

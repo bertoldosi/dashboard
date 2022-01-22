@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { tablet } from "../../../constants/devices";
+import { tablet } from "../../../../../constants/devices";
 
 export const StyleToggleHideMenu = styled.div`
   display: none;
