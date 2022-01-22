@@ -1,11 +1,18 @@
-import { useState, createContext, useMemo } from "react";
+import { useState, createContext } from "react";
 
 export const AppContext = createContext();
 
-export const AppProvider = ({ children, initialData }) => {
-  const [showSidebar, setShowSidebar] = useState(false);
+export const AppProvider = ({ children }) => {
+  const [toggleHideMenubar, setToggleHideMenubar] = useState(false);
 
-  const value = useMemo(() => ({ showSidebar, setShowSidebar }), [showSidebar]);
+  const onToggleHideMenu = () => {
+    setToggleHideMenubar(!toggleHideMenubar);
+  };
+
+  const value = {
+    toggleHideMenubar,
+    onToggleHideMenu,
+  };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

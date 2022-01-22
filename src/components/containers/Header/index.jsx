@@ -1,17 +1,27 @@
-import { ToggleBar } from "./components";
+import { useContext } from "react";
 
-import { Container, MenuBar, MenuContent } from "./style";
+import ToggleMenubar from "../../common/ToggleMenubar";
+import { AppContext } from "../../../contexts/AppProvider";
+
+import {
+  StyleContainer,
+  StyleContainerLogo,
+  StyleMenuBar,
+  StyleMenuContent,
+} from "./style";
 
 function Header() {
-  return (
-    <Container>
-      {/* <divontainerLogo} /> */}
+  const { onToggleHideMenu } = useContext(AppContext);
 
-      <MenuBar>
-        <ToggleBar />
-        <MenuContent />
-      </MenuBar>
-    </Container>
+  return (
+    <StyleContainer>
+      <StyleContainerLogo>VELTRIX</StyleContainerLogo>
+
+      <StyleMenuBar>
+        <ToggleMenubar onToggleHideMenu={onToggleHideMenu} />
+        <StyleMenuContent />
+      </StyleMenuBar>
+    </StyleContainer>
   );
 }
 
