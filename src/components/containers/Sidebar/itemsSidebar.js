@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import { BsCalendar, BsEnvelope, BsGraphUp } from "react-icons/bs";
+import { BsEnvelope, BsGraphUp, BsCalendar4, BsBoxSeam } from "../../../icons";
 
 export default [
   {
@@ -10,30 +10,41 @@ export default [
         id: "dashboard",
         title: "Dashboard",
         icon: <BsGraphUp />,
-        submenus: [
-          { title: "Inbox" },
-          { title: "Email Read" },
-          { title: "Chat Compose" },
-        ],
+        submenus: [],
       },
-
+      {
+        id: "calendar",
+        title: "Calendar",
+        icon: <BsCalendar4 />,
+        href: "/page",
+        submenus: [],
+      },
       {
         id: "email",
         title: "Email",
         icon: <BsEnvelope />,
         submenus: [
-          { title: "item01" },
-          { title: "item02 item" },
-          { title: "item03 item item" },
+          { title: "Inbox", href: "inbox" },
+          { title: "Email Read", href: "emailread" },
+          { title: "Chat Compose", href: "chatcompose" },
         ],
       },
+    ],
+  },
 
+  {
+    title: "components",
+    id: "components",
+    menus: [
       {
-        id: "semsub",
-        title: "Sem sub",
-        icon: <BsCalendar />,
-        href: "/page",
-        submenus: [],
+        id: "uielements",
+        title: "UI Elements",
+        icon: <BsBoxSeam />,
+        submenus: [
+          { title: "Elementos 01", href: "/element01" },
+          { title: "Elementos 02", href: "/element02" },
+          { title: "Elementos 03", href: "/element03" },
+        ],
       },
     ],
   },
