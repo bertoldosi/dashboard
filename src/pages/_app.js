@@ -5,21 +5,23 @@ import { Container } from "./style";
 import { AppProvider } from "@Contexts/AppProvider";
 import Sidebar from "@Containers/Sidebar";
 import Header from "@Containers/Header";
+import RightBar from "@Containers/RightBar";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Theme>
-      <GlobalStyle />
-      <AppProvider initialData={pageProps?.initialData}>
+    <AppProvider initialData={pageProps?.initialData}>
+      <Theme>
+        <GlobalStyle />
         <main>
           <Header />
           <Container>
             <Sidebar />
             <Component {...pageProps} />
+            <RightBar />
           </Container>
         </main>
-      </AppProvider>
-    </Theme>
+      </Theme>
+    </AppProvider>
   );
 }
 

@@ -23,7 +23,7 @@ import {
 } from "./style";
 
 function Header() {
-  const { onToggleHideMenu } = useContext(AppContext);
+  const { onToggleHideMenu, onToggleRightBar } = useContext(AppContext);
 
   return (
     <StyleContainer>
@@ -44,7 +44,7 @@ function Header() {
             header={<HederProfile />}
             elements={<ProfileContent />}
           />
-          <BsGear size={20} />
+          <BsGear cursor="pointer" size={20} onClick={onToggleRightBar} />
         </StyleMenuContent>
       </StyleMenuBar>
     </StyleContainer>

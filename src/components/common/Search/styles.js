@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: ${(props) => props.theme.header_background_emphasis};
+  background-color: ${(props) => props.theme.header_background_click};
   border-radius: 3rem;
   padding: 0rem 1.2rem;
 

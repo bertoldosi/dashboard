@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: var(--bs-font-sans-serif);
     font-size: 1.4rem;
     font-weight: 400;
+    color: ${(props) => props.theme.color};
     background-color: ${(props) => props.theme.background};
 
   }

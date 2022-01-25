@@ -9,6 +9,7 @@ export {
   BsChevronUp,
   BsPersonCircle,
   BsGear,
+  BsFillXCircleFill,
 } from "react-icons/bs";
 
 export { FaSearch } from "react-icons/fa";

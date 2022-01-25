@@ -9,6 +9,7 @@ export default [
       {
         id: "dashboard",
         title: "Dashboard",
+        href: "/",
         icon: <BsGraphUp />,
         submenus: [],
       },
