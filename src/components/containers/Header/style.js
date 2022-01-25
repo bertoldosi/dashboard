@@ -25,7 +25,13 @@ export const StyleContainerLogo = styled.header`
 export const StyleMenuBar = styled.div`
   display: flex;
   align-items: center;
+  flex: 1;
+  justify-content: space-between;
 `;
+
 export const StyleMenuContent = styled.div`
-  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0rem 1.5rem;
 `;

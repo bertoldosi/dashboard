@@ -2,7 +2,7 @@ import { AppProvider } from "../contexts/AppProvider";
 import GlobalStyle from "../styles/globalStyles";
 import Theme from "../themes";
 
-import { Container, Content } from "./style";
+import { Container } from "./style";
 
 import Header from "../components/containers/Header";
 import Sidebar from "../components/containers/Sidebar";
@@ -12,13 +12,13 @@ function MyApp({ Component, pageProps }) {
     <Theme>
       <GlobalStyle />
       <AppProvider initialData={pageProps?.initialData}>
-        <Container>
+        <main>
           <Header />
-          <Content>
+          <Container>
             <Sidebar />
             <Component {...pageProps} />
-          </Content>
-        </Container>
+          </Container>
+        </main>
       </AppProvider>
     </Theme>
   );

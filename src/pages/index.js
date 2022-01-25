@@ -1,3 +1,5 @@
+import { Content } from "./style";
+
 export default function Home() {
-  return <div>Hello word!</div>;
+  return <Content>Hello word!</Content>;
 }

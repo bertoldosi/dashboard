@@ -12,14 +12,14 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-size: 62.5%;
+    user-select: none;
   }
 
   body {
     font-family: var(--bs-font-sans-serif);
     font-size: 1.4rem;
     font-weight: 400;
-    color:${(props) => props.theme.color_common_05};
-    background-color: ${(props) => props.theme.color_08};
+    background-color: ${(props) => props.theme.background};
 
   }
 
@@ -38,6 +38,10 @@ const GlobalStyle = createGlobalStyle`
 
   li {
     list-style: none;
+
+    a{
+      text-decoration: none;
+    }
   }
 
 `;

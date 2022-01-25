@@ -11,12 +11,11 @@ import {
   StyleSubMenu,
 } from "./styles";
 
-import { BsChevronDown, BsChevronUp } from "react-icons/bs";
+import { BsChevronDown, BsChevronUp } from "../../../icons";
 
 function Sidebar() {
   const router = useRouter();
   const [listaSidebar, submenusExpanded] = useListaSidebar(itemsSidebar);
-
   const { toggleHideMenubar } = useContext(AppContext);
 
   const redirectPage = (href) => {
