@@ -1,7 +1,8 @@
 import { useContext } from "react";
-import Image from "next/image";
 
-import { AppContext } from "../../../contexts/AppProvider";
+import { AppContext } from "@Contexts/AppProvider";
+import Dropdown from "@Common/Dropdown";
+import Search from "@Common/Search";
 
 import {
   ToggleMenubar,
@@ -9,9 +10,8 @@ import {
   ProfileContent,
   LanguagesContent,
   LanguagesHeader,
+  FullScreen,
 } from "./components";
-import Dropdown from "../../common/Dropdown";
-import Search from "../../common/Search";
 
 import { BsGear } from "../../../icons";
 
@@ -21,7 +21,6 @@ import {
   StyleMenuBar,
   StyleMenuContent,
 } from "./style";
-import FullScreen from "./components/FullScreen";
 
 function Header() {
   const { onToggleHideMenu } = useContext(AppContext);

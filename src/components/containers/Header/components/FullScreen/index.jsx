@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Container } from "./styles";
 import { AiOutlineExpand, BiExitFullscreen } from "../../../../../icons";
 
-function FullScreen() {
+export const FullScreen = () => {
   const [elem] = useState(() => {
     if (typeof window !== "undefined") {
       return window.document.documentElement;
@@ -47,6 +47,4 @@ function FullScreen() {
       )}
     </Container>
   );
-}
-
-export default FullScreen;
+};

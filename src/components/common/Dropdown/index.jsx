@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { BsChevronDown, BsChevronUp } from "../../../icons";
+import { BsChevronDown, BsChevronUp } from "@Icons";
 import { StyleContainer, StyleElement } from "./styles";
 
 function Dropdown({ elements, header, hideChevronIcon }) {

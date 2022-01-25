@@ -1,11 +1,10 @@
-import { AppProvider } from "../contexts/AppProvider";
 import GlobalStyle from "../styles/globalStyles";
 import Theme from "../themes";
-
 import { Container } from "./style";
 
-import Header from "../components/containers/Header";
-import Sidebar from "../components/containers/Sidebar";
+import { AppProvider } from "@Contexts/AppProvider";
+import Sidebar from "@Containers/Sidebar";
+import Header from "@Containers/Header";
 
 function MyApp({ Component, pageProps }) {
   return (

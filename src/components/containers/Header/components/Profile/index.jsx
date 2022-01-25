@@ -2,7 +2,7 @@ import Image from "next/image";
 import { StyleProfile, StyleHederProfile } from "./styles";
 
 import { BsPersonCircle, GiExitDoor } from "../../../../../icons";
-import perfil from "../../../../../assets/img/perfil.jpg";
+import perfil from "@Assets/img/perfil.jpg";
 
 export const ProfileContent = () => {
   return (

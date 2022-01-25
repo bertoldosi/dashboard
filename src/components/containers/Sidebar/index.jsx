@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { useRouter } from "next/router";
 import itemsSidebar from "./itemsSidebar";
-import { AppContext } from "../../../contexts/AppProvider";
-import useListaSidebar from "../../../hooks/useListaSidebar";
+
+import useListaSidebar from "@Hooks/useListaSidebar";
+import { AppContext } from "@Contexts/AppProvider";
 
 import {
   StyleContainer,

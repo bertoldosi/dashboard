@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { StyleLanguages } from "./styles";
 
-import italia from "../../../../../assets/img/italia.png";
-import eua from "../../../../../assets/img/us_flag.jpg";
-import br from "../../../../../assets/img/br.jpg";
+import italia from "@Assets/img/italia.png";
+import eua from "@Assets/img/us_flag.jpg";
+import br from "@Assets/img/br.jpg";
 
 export const LanguagesContent = () => {
   return (
