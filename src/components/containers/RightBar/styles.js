@@ -67,7 +67,7 @@ export const StyleContent = styled.div`
       background-color: white;
       border-radius: 50%;
       vertical-align: middle;
-      border: 1px solid #fff;
+      border: 1px solid #000;
       appearance: none;
       -webkit-appearance: none;
       outline: none;
