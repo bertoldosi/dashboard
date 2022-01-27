@@ -15,6 +15,7 @@ export const StyleInputContainer = styled.div`
   background-color: ${(props) => props.theme.header_background_click};
   border-radius: 3rem;
   padding: 0rem 1.2rem;
+  margin-right: 1rem;
 
   input {
     width: 100%;

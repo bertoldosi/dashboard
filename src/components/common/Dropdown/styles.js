@@ -27,7 +27,7 @@ export const StyleHeader = styled.div`
   display: flex;
   align-items: center;
 
-  span {
+  strong {
     margin-left: 0.5rem;
   }
 
@@ -36,7 +36,7 @@ export const StyleHeader = styled.div`
   }
 
   @media ${mobileM} {
-    span {
+    strong {
       display: none;
     }
   }

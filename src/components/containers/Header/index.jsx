@@ -10,11 +10,9 @@ import {
   HederProfile,
   ProfileContent,
   LanguagesContent,
-  FullScreen,
   Search,
+  Config,
 } from "./components";
-
-import { BsGear } from "@Icons";
 
 import {
   StyleContainer,
@@ -24,7 +22,7 @@ import {
 } from "./style";
 
 function Header() {
-  const { onToggleHideMenu, onToggleRightBar } = useContext(AppContext);
+  const { onToggleHideMenu } = useContext(AppContext);
 
   return (
     <StyleContainer>
@@ -41,13 +39,13 @@ function Header() {
             icon={<Image src={br} height={17} width={25} alt="eua" />}
             elements={<LanguagesContent />}
           />
-          <FullScreen />
           <Dropdown
             hideChevronIcon
             icon={<HederProfile />}
             elements={<ProfileContent />}
           />
-          <BsGear cursor="pointer" size={20} onClick={onToggleRightBar} />
+
+          <Config />
         </StyleMenuContent>
       </StyleMenuBar>
     </StyleContainer>

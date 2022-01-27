@@ -13,7 +13,7 @@ function Dropdown({ label, icon, elements, hideChevronIcon }) {
     <StyleContainer isVisible={isVisible}>
       <StyleHeader onClick={() => setIsVisible(!isVisible)}>
         {icon}
-        <span>{label}</span>
+        {label && <strong>{label}</strong>}
 
         {!hideChevronIcon && <RenderIcon isVisible={isVisible} />}
       </StyleHeader>
