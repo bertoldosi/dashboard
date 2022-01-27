@@ -1,37 +1,57 @@
+import { mobileM, mobileS } from "@Constants/devices";
 import styled from "styled-components";
 
 export const StyleContainer = styled.div`
-  height: 100%;
   display: flex;
   align-items: center;
-  margin: 0rem 1rem;
   position: relative;
-  padding: 0rem 1.2rem;
+  cursor: pointer;
+
+  padding: 0 1rem;
+  height: 100%;
+  transition: 0.5s;
   background-color: ${(props) =>
-    props.isVisible && props.theme.header_background_click};
+    props.isVisible && props.theme.header_background_hover};
 
-  > div {
-    display: flex;
-    align-items: center;
+  &:hover {
+    background-color: ${(props) => props.theme.header_background_hover};
+  }
 
-    cursor: pointer;
+  @media ${mobileS} {
+    position: initial;
+  }
+`;
 
-    > span {
-      margin: 0.8rem;
-    }
+export const StyleHeader = styled.div`
+  height: 7rem;
+  display: flex;
+  align-items: center;
 
-    svg {
-      font-size: 1.2rem;
+  span {
+    margin-left: 0.5rem;
+  }
+
+  svg {
+    margin-left: 0.5rem;
+  }
+
+  @media ${mobileM} {
+    span {
+      display: none;
     }
   }
 `;
 
-export const StyleElement = styled.div`
-  width: max-content;
-  height: 100%;
-  display: ${(props) => (props.isVisible ? "flex" : "none")} !important;
-  flex-direction: column;
+export const StyleContent = styled.div`
+  display: ${(props) => (props.isVisible ? "initial" : "none")};
   position: absolute;
+  top: 7rem;
   right: 0;
-  bottom: -7rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  transition: 0.5s;
+  background-color: ${(props) => props.theme.header_background_click};
+
+  @media ${mobileS} {
+    width: 100%;
+  }
 `;

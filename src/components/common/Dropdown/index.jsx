@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 import { BsChevronDown, BsChevronUp } from "@Icons";
-import { StyleContainer, StyleElement } from "./styles";
+import { StyleContainer, StyleContent, StyleHeader } from "./styles";
 
-function Dropdown({ elements, header, hideChevronIcon }) {
+function Dropdown({ label, icon, elements, hideChevronIcon }) {
   const [isVisible, setIsVisible] = useState(false);
 
   const RenderIcon = ({ isVisible }) =>
@@ -11,11 +11,14 @@ function Dropdown({ elements, header, hideChevronIcon }) {
 
   return (
     <StyleContainer isVisible={isVisible}>
-      <div onClick={() => setIsVisible(!isVisible)}>
-        {header}
+      <StyleHeader onClick={() => setIsVisible(!isVisible)}>
+        {icon}
+        <span>{label}</span>
+
         {!hideChevronIcon && <RenderIcon isVisible={isVisible} />}
-      </div>
-      <StyleElement isVisible={isVisible}>{elements}</StyleElement>
+      </StyleHeader>
+
+      <StyleContent isVisible={isVisible}>{elements}</StyleContent>
     </StyleContainer>
   );
 }

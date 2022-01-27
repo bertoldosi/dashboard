@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { tablet } from "../../../constants/devices";
+import { mobileS, tablet } from "../../../constants/devices";
 
 export const StyleContainer = styled.header`
   width: 100%;
@@ -7,6 +7,10 @@ export const StyleContainer = styled.header`
   display: flex;
   background-color: ${(props) => props.theme.header_background};
   color: ${(props) => props.theme.header_color};
+
+  @media ${mobileS} {
+    position: relative;
+  }
 `;
 
 export const StyleContainerLogo = styled.header`
@@ -33,5 +37,5 @@ export const StyleMenuContent = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 0rem 1.5rem;
+  padding: 0rem 1.5rem 0 0;
 `;

@@ -2,18 +2,19 @@ import { useContext } from "react";
 
 import { AppContext } from "@Contexts/AppProvider";
 import Dropdown from "@Common/Dropdown";
-import Search from "@Common/Search";
+import Image from "next/image";
+import br from "@Assets/img/br.jpg";
 
 import {
   ToggleMenubar,
   HederProfile,
   ProfileContent,
   LanguagesContent,
-  LanguagesHeader,
   FullScreen,
+  Search,
 } from "./components";
 
-import { BsGear } from "../../../icons";
+import { BsGear } from "@Icons";
 
 import {
   StyleContainer,
@@ -34,8 +35,10 @@ function Header() {
 
         <StyleMenuContent>
           <Search />
+
           <Dropdown
-            header={<LanguagesHeader />}
+            label="Português"
+            icon={<Image src={br} height={17} width={25} alt="eua" />}
             elements={<LanguagesContent />}
           />
           <FullScreen />

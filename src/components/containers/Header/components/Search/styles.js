@@ -1,6 +1,13 @@
+import { mobileS } from "@Constants/devices";
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const StyleContainer = styled.div`
+  @media ${mobileS} {
+    display: none;
+  }
+`;
+
+export const StyleInputContainer = styled.div`
   height: 35px;
   display: flex;
   align-items: center;
@@ -10,6 +17,7 @@ export const Container = styled.div`
   padding: 0rem 1.2rem;
 
   input {
+    width: 100%;
     border: none;
     background: transparent;
     outline: none;
@@ -21,5 +29,18 @@ export const Container = styled.div`
       color: #9ca8b3;
       font-size: 1.4rem;
     }
+  }
+
+  @media ${mobileS} {
+    margin: 1rem;
+    background-color: ${(props) => props.theme.header_background_emphasis};
+    height: 35px;
+  }
+`;
+
+export const StyleDropdown = styled.div`
+  display: none;
+  @media ${mobileS} {
+    display: initial;
   }
 `;
