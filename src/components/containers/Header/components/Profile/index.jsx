@@ -1,19 +1,19 @@
 import Image from "next/image";
 import { StyleProfile, StyleHederProfile } from "./styles";
 
-import { BsPersonCircle, GiExitDoor } from "../../../../../icons";
+import { BsPersonCircle, GiExitDoor } from "@Icons";
 import perfil from "@Assets/img/perfil.jpg";
 
 export const ProfileContent = () => {
   return (
     <StyleProfile>
       <li>
-        <BsPersonCircle />
+        <BsPersonCircle size={20} />
         <a href="http://">Profile</a>
       </li>
 
       <li>
-        <GiExitDoor />
+        <GiExitDoor size={20} />
         <a href="http://">Logout</a>
       </li>
     </StyleProfile>

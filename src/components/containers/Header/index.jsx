@@ -2,8 +2,8 @@ import { useContext } from "react";
 
 import { AppContext } from "@Contexts/AppProvider";
 import Dropdown from "@Common/Dropdown";
-import Image from "next/image";
 import br from "@Assets/img/br.jpg";
+import Image from "next/image";
 
 import {
   ToggleMenubar,
@@ -44,7 +44,7 @@ function Header() {
           <FullScreen />
           <Dropdown
             hideChevronIcon
-            header={<HederProfile />}
+            icon={<HederProfile />}
             elements={<ProfileContent />}
           />
           <BsGear cursor="pointer" size={20} onClick={onToggleRightBar} />
