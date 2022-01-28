@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const StyleContainer = styled.div`
+  width: 100%;
   display: ${(props) => (props.isVisible ? "flex" : "none")};
   justify-content: end;
-  width: 100%;
-  height: 100%;
   top: 0;
   right: 0;
+  bottom: 0;
   position: absolute;
   color: ${(props) => props.theme.rightbar_color};
   background-color: ${(props) => props.theme.rightbar_background_opacity};
@@ -14,8 +14,10 @@ export const StyleContainer = styled.div`
 
 export const StyleSidebar = styled.aside`
   width: 28rem;
+  height: 100%;
   background: ${(props) => props.theme.rightbar_background};
   font-weight: 600;
+  overflow: auto;
 `;
 
 export const StyleHeader = styled.div`
@@ -39,7 +41,7 @@ export const StyleContent = styled.div`
   justify-content: center;
   flex-direction: column;
 
-  padding: 1.5rem;
+  padding-top: 1.5rem;
 
   strong {
     margin-bottom: 1.5rem;
