@@ -3,6 +3,7 @@ import { tablet } from "../../../constants/devices";
 
 export const StyleContainer = styled.aside`
   width: 24rem;
+  min-width: 24rem;
   height: 100%;
   background-color: ${(props) => props.theme.sidebar_background};
   color: ${(props) => props.theme.sidebar_color};
