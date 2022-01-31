@@ -15,4 +15,4 @@ export {
 export { FaSearch } from "react-icons/fa";
 export { AiOutlineExpand } from "react-icons/ai";
 export { GiExitDoor } from "react-icons/gi";
-export { BiMenu, BiExitFullscreen } from "react-icons/bi";
+export { BiMenu, BiExitFullscreen, BiChevronRight } from "react-icons/bi";

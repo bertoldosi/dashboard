@@ -4,7 +4,7 @@ import Sidebar from "@Containers/Sidebar";
 import { AppProvider } from "@Contexts/AppProvider";
 import GlobalStyle from "src/styles/globalStyles";
 import Theme from "src/themes";
-import { Container } from "./styles";
+import { StyleContainer, StylePage } from "./styles";
 
 export const Layout = ({ children }) => (
   <AppProvider>
@@ -12,11 +12,11 @@ export const Layout = ({ children }) => (
       <GlobalStyle />
       <main>
         <Header />
-        <Container>
+        <StyleContainer>
           <Sidebar />
-          {children}
+          <StylePage>{children}</StylePage>
           <RightBar />
-        </Container>
+        </StyleContainer>
       </main>
     </Theme>
   </AppProvider>

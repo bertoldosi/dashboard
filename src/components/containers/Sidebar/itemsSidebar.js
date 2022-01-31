@@ -9,7 +9,7 @@ export default [
       {
         id: "dashboard",
         title: "Dashboard",
-        href: "/",
+        href: "/dashboard",
         icon: <BsGraphUp />,
         submenus: [],
       },
@@ -17,7 +17,7 @@ export default [
         id: "calendar",
         title: "Calendar",
         icon: <BsCalendar4 />,
-        href: "/page",
+        href: "/calendar",
         submenus: [],
       },
       {
