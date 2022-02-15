@@ -5,14 +5,14 @@ export {
   BsCalendar4,
   BsBoxSeam,
   BsSearch,
-  BsChevronDown,
+  BsChevronDown, 
   BsChevronUp,
   BsPersonCircle,
   BsGear,
   BsFillXCircleFill,
 } from "react-icons/bs";
 
-export { FaSearch } from "react-icons/fa";
+export { FaSearch, FaHandHoldingUsd } from "react-icons/fa";
 export { AiOutlineExpand } from "react-icons/ai";
 export { GiExitDoor } from "react-icons/gi";
 export { BiMenu, BiExitFullscreen, BiChevronRight } from "react-icons/bi";

@@ -6,6 +6,7 @@ export const Container = styled.div`
   align-items: center;
   padding: 0 1rem;
   transition: 0.5s;
+  cursor: pointer;
 
   &:hover {
     background-color: ${(props) => props.theme.header_background_hover};

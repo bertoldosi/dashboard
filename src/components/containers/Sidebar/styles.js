@@ -35,6 +35,7 @@ export const StyleMenuTitle = styled.li`
   align-items: center;
   padding: 1.2rem 2rem;
   cursor: pointer;
+  transition: 0.5s;
 
   svg:first-child {
     margin-right: 1.8rem;
@@ -67,6 +68,7 @@ export const StyleSubMenu = styled.ul`
     a {
       color: ${(props) => props.theme.sidebar_color};
       text-decoration: none;
+      transition: 0.5s;
 
       &:hover {
         color: ${(props) => props.theme.sidebar_color_hover};

@@ -8,4 +8,6 @@ export const StyleContainer = styled.div`
 export const StylePage = styled.div`
   width: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
+  padding: 2rem;
 `;

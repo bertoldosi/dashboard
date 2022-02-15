@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import { BsEnvelope, BsGraphUp, BsCalendar4, BsBoxSeam } from "../../../icons";
+import { BsEnvelope, BsGraphUp, BsCalendar4, BsBoxSeam } from "@Icons";
 
 export default [
   {

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.nav`
-  padding: 1.6rem;
+  padding: 1.6rem 0;
 
   ol {
     display: flex;

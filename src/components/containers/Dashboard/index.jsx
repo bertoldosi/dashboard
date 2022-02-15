@@ -1,48 +1,75 @@
 import CardItem from "@Common/CardItem";
-import { Container } from "./styles";
-
 import {
-  BiDownArrowAlt,
-  BiReceipt,
-  BiRightArrowAlt,
-  BiUpArrowAlt,
-} from "react-icons/bi";
+  StyleContainer,
+  StyleCard,
+  StyleChartEarning,
+  StylAnalytic,
+  StyleChart,
+  StyleAreaChartFillByValue,
+  StyleAreaChartFillByValueLabel,
+} from "./styles";
+
+import cardItems from "./cardItems";
+import { Chart } from "@Common/Chart";
+import { PieChart } from "@Common/Chart";
+import Card from "@Common/Card";
+import AreaChartFillByValue from "@Common/AreaChartFillByValue";
 
 function Dashboard() {
   return (
-    <Container>
-      <CardItem
-        title="ORDERS"
-        icon={<BiReceipt size={20} />}
-        value="1,685"
-        valueTag="+12"
-        colorTag="#02A499"
-      />
+    <StyleContainer>
+      <StyleCard>
+        {cardItems.map(({ title, value, valueTag, colorTag }) => (
+          <CardItem
+            key={title}
+            title={title}
+            value={value}
+            valueTag={valueTag}
+            colorTag={colorTag}
+          />
+        ))}
+      </StyleCard>
 
-      <CardItem
-        title="REVENUE"
-        icon={<BiReceipt size={20} />}
-        value="52,368"
-        valueTag="-12"
-        colorTag="#EC4561"
-      />
+      <StyleChart>
+        <Card title="Monthly Earning">
+          <StyleChartEarning>
+            <Chart />
+            <PieChart />
+          </StyleChartEarning>
+        </Card>
 
-      <CardItem
-        title="AVERAGE PRICE"
-        icon={<BiReceipt size={20} />}
-        value="15,8"
-        valueTag="00"
-        colorTag="#38A4F8"
-      />
+        <Card title="Sales Analytics">
+          <StylAnalytic>
+            <StyleAreaChartFillByValue>
+              <StyleAreaChartFillByValueLabel>
+                <span>Online</span>
+                <strong>1,542</strong>
+              </StyleAreaChartFillByValueLabel>
 
-      <CardItem
-        title="PRODUCT SOLD"
-        icon={<BiReceipt size={20} />}
-        value="2436"
-        valueTag="+84"
-        colorTag="#F8B425"
-      />
-    </Container>
+              <AreaChartFillByValue />
+            </StyleAreaChartFillByValue>
+
+            <StyleAreaChartFillByValue>
+              <StyleAreaChartFillByValueLabel>
+                <span>Online</span>
+                <strong>1,542</strong>
+              </StyleAreaChartFillByValueLabel>
+
+              <AreaChartFillByValue />
+            </StyleAreaChartFillByValue>
+
+            <StyleAreaChartFillByValue>
+              <StyleAreaChartFillByValueLabel>
+                <span>Online</span>
+                <strong>1,542</strong>
+              </StyleAreaChartFillByValueLabel>
+
+              <AreaChartFillByValue />
+            </StyleAreaChartFillByValue>
+          </StylAnalytic>
+        </Card>
+      </StyleChart>
+    </StyleContainer>
   );
 }
 

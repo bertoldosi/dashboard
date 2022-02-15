@@ -10,6 +10,7 @@ export const StyleProfile = styled.ul`
     display: flex;
     align-items: center;
     padding: 1rem;
+    transition: 0.5s;
 
     &:hover {
       background-color: ${(props) => props.theme.header_background_hover};

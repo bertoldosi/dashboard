@@ -1,4 +1,9 @@
-import { BiDownArrowAlt, BiRightArrowAlt, BiUpArrowAlt } from "react-icons/bi";
+import {
+  BiDownArrowAlt,
+  BiReceipt,
+  BiRightArrowAlt,
+  BiUpArrowAlt,
+} from "react-icons/bi";
 
 import {
   StyleContainer,
@@ -10,12 +15,14 @@ import {
   StyleTag,
 } from "./styles";
 
-function CardItem({ title, icon, value, valueTag, colorTag }) {
+function CardItem({ title, value, valueTag, colorTag }) {
   return (
     <StyleContainer>
       <StyleHeader>
         <StyleInfo>
-          <StyleIcon>{icon}</StyleIcon>
+          <StyleIcon>
+            <BiReceipt size={20} />
+          </StyleIcon>
 
           <StyleLabel>
             <strong>{title}</strong>
