@@ -1,40 +1,66 @@
 /* eslint-disable import/no-anonymous-default-export */
-import { BsEnvelope, BsGraphUp, BsCalendar4, BsBoxSeam } from "@Icons";
+import {
+  BiPieChart,
+  BsGraphUp,
+  BsHouseDoor,
+  BsBoxSeam,
+  BiStats,
+  BiSpreadsheet,
+  BiMessageDetail,
+} from "@Icons";
 
 export default [
   {
-    title: "main",
-    id: "main",
+    title: "containers",
+    id: "containers",
     menus: [
       {
         id: "dashboard",
         title: "Dashboard",
-        href: "/dashboard",
+        href: "/",
+        icon: <BsHouseDoor />,
+        submenus: [],
+      },
+      {
+        id: "chart",
+        title: "Chart",
         icon: <BsGraphUp />,
+        href: "/chart",
         submenus: [],
       },
       {
-        id: "calendar",
-        title: "Calendar",
-        icon: <BsCalendar4 />,
-        href: "/calendar",
+        id: "salesReport",
+        title: "Sales Report",
+        icon: <BiPieChart />,
+        href: "/sales-report",
         submenus: [],
       },
       {
-        id: "email",
-        title: "Email",
-        icon: <BsEnvelope />,
-        submenus: [
-          { title: "Inbox", href: "inbox" },
-          { title: "Email Read", href: "emailread" },
-          { title: "Chat Compose", href: "chatcompose" },
-        ],
+        id: "activity",
+        title: "Activity",
+        icon: <BiStats />,
+        href: "/activity",
+        submenus: [],
+      },
+      {
+        id: "table",
+        title: "Table",
+        icon: <BiSpreadsheet />,
+        href: "/table",
+        submenus: [],
+      },
+      {
+        id: "chat",
+        title: "Chat",
+        icon: <BiMessageDetail />,
+        href: "/chat",
+        submenus: [],
       },
     ],
   },
 
   {
-    title: "components",
+    title: "small components",
     id: "components",
     menus: [
       {
@@ -42,9 +68,8 @@ export default [
         title: "UI Elements",
         icon: <BsBoxSeam />,
         submenus: [
-          { title: "Elementos 01", href: "/element01" },
-          { title: "Elementos 02", href: "/element02" },
-          { title: "Elementos 03", href: "/element03" },
+          { title: "Check-out", href: "/checkout" },
+          { title: "Comment", href: "/comment" },
         ],
       },
     ],

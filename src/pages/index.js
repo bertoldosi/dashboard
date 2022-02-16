@@ -1,7 +1,11 @@
+import BreadCrumbs from "@Common/BreadCrumbs";
+import Dashboard from '@Containers/Dashboard'
+
 export default function Home() {
   return (
-    <div>
-      <h1>teste</h1>
-    </div>
+    <>
+      <BreadCrumbs title="Dashboard" resumePage="Welcome to Dashboard" />
+      <Dashboard />
+    </>
   );
 }
