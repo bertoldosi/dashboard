@@ -1,7 +1,23 @@
-import { Container } from "./styles";
+import { StyleContainer } from "./styles";
 
 function SalesReport() {
-  return <Container></Container>;
+  return <StyleContainer></StyleContainer>;
 }
 
 export default SalesReport;
+
+// import Card from "@Common/Card";
+// import PieChart from "@Common/PieChart";
+// import { StyleContainer } from "./styles";
+
+// function SalesReport() {
+//   return (
+//     <StyleContainer>
+//       <Card title="Sales Report">
+//         <PieChart></PieChart>
+//       </Card>
+//     </StyleContainer>
+//   );
+// }
+
+// export default SalesReport;
