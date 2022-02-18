@@ -12,12 +12,17 @@ import {
   StyleSubMenu,
 } from "./styles";
 
-import { BsChevronDown, BsChevronUp } from "../../../icons";
+import { BsChevronDown, BsChevronUp } from "@Icons";
 
 function Sidebar() {
   const router = useRouter();
   const [listaSidebar, submenusExpanded] = useListaSidebar(itemsSidebar);
   const { toggleHideMenubar } = useContext(AppContext);
+  const [pathName, setPathName] = React.useState(() => {
+    if (typeof window !== "undefined") {
+      window.location.pathname;
+    }
+  });
 
   const redirectPage = (href) => {
     router.push(href);
@@ -42,6 +47,7 @@ function Sidebar() {
   const RenderMenu = ({ menu }) => (
     <ul>
       <StyleMenuTitle
+        isActive={pathName === menu?.href}
         onClick={() =>
           menu.isSubmenus ? submenusExpanded(menu.id) : redirectPage(menu?.href)
         }
@@ -60,6 +66,13 @@ function Sidebar() {
         ))}
     </ul>
   );
+
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      setPathName(window.location.pathname);
+      console.log(pathName);
+    }
+  }, [typeof window !== "undefined" && window.location.pathname, pathName]);
 
   return (
     <StyleContainer hideSidebar={toggleHideMenubar}>

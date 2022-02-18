@@ -52,6 +52,9 @@ export const StyleMenuTitle = styled.li`
     font-size: 1.5rem;
   }
 
+  background-color: ${({ theme, isActive }) =>
+    isActive && theme.sidebar_background_hover};
+
   &:hover {
     background-color: ${(props) => props.theme.sidebar_background_hover};
     color: ${(props) => props.theme.sidebar_color_hover};
