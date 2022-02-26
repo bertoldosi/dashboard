@@ -1,9 +1,11 @@
+import Button from "@Common/Button";
 import Card from "@Common/Card";
 import {
   StyleContainer,
   StyleContent,
   StyleTimeLine,
   StyleLabel,
+  StyleButton,
 } from "./styles";
 
 const activitys = [
@@ -47,6 +49,9 @@ function Activity() {
           </StyleContent>
         ))}
       </StyleContainer>
+      <StyleButton>
+        <Button name="Load More" />
+      </StyleButton>
     </Card>
   );
 }

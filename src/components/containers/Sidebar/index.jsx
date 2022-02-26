@@ -72,6 +72,7 @@ function Sidebar() {
       setPathName(window.location.pathname);
       console.log(pathName);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [typeof window !== "undefined" && window.location.pathname, pathName]);
 
   return (

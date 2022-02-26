@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-size: 62.5%;
-    user-select: none;
+    
   }
 
   body {
@@ -43,6 +43,10 @@ const GlobalStyle = createGlobalStyle`
     a{
       text-decoration: none;
     }
+  }
+
+  button{
+    cursor: pointer;
   }
 
 `;

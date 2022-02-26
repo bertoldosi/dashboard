@@ -1,8 +1,8 @@
-import Image from "next/image";
-import { StyleProfile, StyleHederProfile } from "./styles";
+import { StyleProfile } from "./styles";
 
 import { BsPersonCircle, GiExitDoor } from "@Icons";
-import perfil from "@Assets/img/perfil.jpg";
+import profile from "@Assets/img/perfil.jpg";
+import ImageRadio from "@Common/ImageRadio";
 
 export const ProfileContent = () => {
   return (
@@ -21,7 +21,5 @@ export const ProfileContent = () => {
 };
 
 export const HederProfile = () => (
-  <StyleHederProfile>
-    <Image src={perfil} height={30} width={30} alt="eua" />
-  </StyleHederProfile>
+  <ImageRadio src={profile} height={30} width={30} alt="Photo to profile" />
 );

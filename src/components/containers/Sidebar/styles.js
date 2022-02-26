@@ -7,6 +7,7 @@ export const StyleContainer = styled.aside`
   height: 100%;
   background-color: ${(props) => props.theme.sidebar_background};
   color: ${(props) => props.theme.sidebar_color};
+  z-index: 1;
 
   @media ${tablet} {
     ${(props) =>
