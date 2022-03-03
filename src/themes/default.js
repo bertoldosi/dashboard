@@ -19,4 +19,6 @@ export const variables = {
   rightbar_color: "#4B545C",
   rightbar_border_color_img: "#F8F8FA",
   rightbar_background_opacity: "rgba(52,58,64,.55)",
+
+  card_background: "#FFFFFF",
 };

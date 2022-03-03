@@ -5,7 +5,7 @@ export const StyleContainer = styled.div`
   flex-direction: column;
   border-radius: 0.3rem;
   padding: 2rem;
-  background-color: #2a3042;
+  background-color: ${(props) => props.theme.card_background};
 
   flex-grow: 1;
   flex-basis: 15rem;
