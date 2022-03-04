@@ -44,7 +44,7 @@ function Chat() {
         </StyleMessege>
         <StyleInputMessege>
           <input type="text" placeholder="Enter your text" />
-          <button>Sende</button>
+          <button>Send</button>
         </StyleInputMessege>
       </Card>
     </StyleContainer>
