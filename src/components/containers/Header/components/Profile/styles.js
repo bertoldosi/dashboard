@@ -22,9 +22,3 @@ export const StyleProfile = styled.ul`
     }
   }
 `;
-
-export const StyleHederProfile = styled.div`
-  span {
-    border-radius: 50%;
-  }
-`;

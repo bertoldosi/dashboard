@@ -7,6 +7,7 @@ export const StyleContainer = styled.aside`
   height: 100%;
   background-color: ${(props) => props.theme.sidebar_background};
   color: ${(props) => props.theme.sidebar_color};
+  z-index: 1;
 
   @media ${tablet} {
     ${(props) =>
@@ -51,6 +52,9 @@ export const StyleMenuTitle = styled.li`
     margin-left: auto;
     font-size: 1.5rem;
   }
+
+  background-color: ${({ theme, isActive }) =>
+    isActive && theme.sidebar_background_hover};
 
   &:hover {
     background-color: ${(props) => props.theme.sidebar_background_hover};
