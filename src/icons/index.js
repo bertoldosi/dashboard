@@ -26,3 +26,5 @@ export {
   BiSpreadsheet,
   BiMessageDetail,
 } from "react-icons/bi";
+
+export { MdTimeline } from "react-icons/md";

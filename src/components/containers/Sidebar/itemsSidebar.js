@@ -7,6 +7,7 @@ import {
   BiStats,
   BiSpreadsheet,
   BiMessageDetail,
+  MdTimeline,
 } from "@Icons";
 
 export default [
@@ -54,6 +55,13 @@ export default [
         title: "Chat",
         icon: <BiMessageDetail />,
         href: "/chat",
+        submenus: [],
+      },
+      {
+        id: "timeline",
+        title: "Timeline",
+        icon: <MdTimeline />,
+        href: "/timeline",
         submenus: [],
       },
     ],
