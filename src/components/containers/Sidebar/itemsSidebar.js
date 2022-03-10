@@ -73,12 +73,9 @@ export default [
     menus: [
       {
         id: "uielements",
-        title: "UI Elements",
+        title: "100 DAYS CSS",
         icon: <BsBoxSeam />,
-        submenus: [
-          { title: "Check-out", href: "/checkout" },
-          { title: "Comment", href: "/comment" },
-        ],
+        submenus: [{ title: "Day 001", href: "/css-challenges/day001" }],
       },
     ],
   },
