@@ -1,9 +1,9 @@
-import { StyleContainer, StyleContent, StyleNumber } from "./styles";
+import { StyleContainer, StyleNumber, StyleFooter } from "./styles";
 
 function Day001() {
   return (
     <StyleContainer>
-      <StyleContent>
+      <div>
         <StyleNumber>
           <div></div>
           <div></div>
@@ -11,11 +11,11 @@ function Day001() {
           <div></div>
         </StyleNumber>
 
-        <span>
+        <StyleFooter>
           <h1>days</h1>
           <h3>css challenge</h3>
-        </span>
-      </StyleContent>
+        </StyleFooter>
+      </div>
     </StyleContainer>
   );
 }
