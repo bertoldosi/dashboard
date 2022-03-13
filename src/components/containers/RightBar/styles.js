@@ -10,6 +10,7 @@ export const StyleContainer = styled.div`
   position: absolute;
   color: ${(props) => props.theme.rightbar_color};
   background-color: ${(props) => props.theme.rightbar_background_opacity};
+  z-index: 2;
 `;
 
 export const StyleSidebar = styled.aside`

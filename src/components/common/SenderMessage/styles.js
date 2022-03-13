@@ -14,7 +14,7 @@ export const StyleSenderHeader = styled.div`
 `;
 
 export const StyleSenderBody = styled.div`
-  background-color: #fff;
+  background-color: #e2e4f7;
   color: #626ed4;
   border-radius: 0.5rem;
   padding: 1rem;
@@ -37,7 +37,7 @@ export const StyleSenderBody = styled.div`
 
     border-left: 1.5rem solid transparent;
     border-right: 1.5rem solid transparent;
-    border-top: 1.5rem solid #fff;
+    border-top: 1.5rem solid #e2e4f7;
     border-bottom: 1.5rem solid transparent;
     top: 0;
     left: -1.5rem;

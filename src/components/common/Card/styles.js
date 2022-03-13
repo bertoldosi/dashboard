@@ -6,6 +6,7 @@ export const StyleContainer = styled.div`
   border-radius: 0.3rem;
   padding: 2rem;
   background-color: ${(props) => props.theme.card_background};
+  box-shadow: 0 0 13px 0 rgb(0 0 0 / 20%);
 
   flex-grow: 1;
   flex-basis: 15rem;

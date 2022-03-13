@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.nav`
   padding: 1.6rem 0;
+  color: ${(props) => props.theme.breadcrumb_color};
 
   ol {
     display: flex;
@@ -15,14 +16,14 @@ export const Container = styled.nav`
       a {
         display: flex;
         align-items: center;
-        color: #fff;
+        color: ${(props) => props.theme.breadcrumb_color};
       }
     }
 
     li:last-child {
       a {
         cursor: default;
-        color: rgba(239, 242, 247, 0.5);
+        color: ${(props) => props.theme.breadcrumb_color_opacity};
       }
     }
   }

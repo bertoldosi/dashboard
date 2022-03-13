@@ -7,5 +7,3 @@ export const StyleCard = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
 `;
-
-

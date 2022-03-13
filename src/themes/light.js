@@ -3,6 +3,9 @@ export const variables = {
   background: "#F8F8FA",
   color: "#495057",
 
+  breadcrumb_color: "#495057",
+  breadcrumb_color_opacity: "#495057",
+
   sidebar_background: "#333547",
   sidebar_background_hover: "#383b4e",
   sidebar_color: "#8699ad",

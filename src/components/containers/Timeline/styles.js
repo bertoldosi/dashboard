@@ -7,6 +7,7 @@ export const StyleContainerLeft = styled.div`
   position: relative;
   padding: 6rem;
   margin: 0 4rem;
+  color: #fff;
 
   > span {
     display: flex;
@@ -59,6 +60,7 @@ export const StyleContainerRight = styled.div`
   position: relative;
   padding: 6rem;
   margin: 0 4rem;
+  color: #fff;
 
   > span {
     display: flex;

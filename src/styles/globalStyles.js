@@ -39,10 +39,11 @@ const GlobalStyle = createGlobalStyle`
 
   li {
     list-style: none;
+  }
 
-    a{
+  a{
+      color: #fff ;
       text-decoration: none;
-    }
   }
 
   button{

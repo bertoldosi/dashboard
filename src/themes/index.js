@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { AppContext } from "@Contexts/AppProvider";
 
 import { variables as darkTheme } from "./dark";
-import { variables as defaultTheme } from "./default";
+import { variables as defaultTheme } from "./light";
 
 const Theme = ({ children }) => {
   const { theme } = useContext(AppContext);

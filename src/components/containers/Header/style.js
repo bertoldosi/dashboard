@@ -7,6 +7,7 @@ export const StyleContainer = styled.header`
   display: flex;
   background-color: ${(props) => props.theme.header_background};
   color: ${(props) => props.theme.header_color};
+  box-shadow: 0 0 13px 0 rgb(0 0 0 / 20%);
 
   @media ${mobileS} {
     position: relative;

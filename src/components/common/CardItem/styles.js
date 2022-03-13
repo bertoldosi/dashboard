@@ -5,6 +5,7 @@ export const StyleContainer = styled.div`
   background-color: #626ed4;
   border-radius: 0.3rem;
   margin-bottom: 1rem;
+  box-shadow: 0 0 13px 0 rgb(0 0 0 / 20%);
 
   flex-grow: 1;
   flex-basis: 15rem;

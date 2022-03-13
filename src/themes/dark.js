@@ -3,6 +3,10 @@ export const variables = {
   background: "#222736",
   background_white: "#fff",
   color: "#dee2e6",
+
+  breadcrumb_color: "#fff",
+  breadcrumb_color_opacity: `rgba(239, 242, 247, 0.5)`,
+
   sidebar_background: "#2A3142",
   sidebar_background_hover: "#2F374A",
   sidebar_color: "#a6b0cf",
