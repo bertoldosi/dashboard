@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'npm run dev'
+                sh 'vercel --prod'
             }
         }
     }
