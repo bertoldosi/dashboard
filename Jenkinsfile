@@ -12,9 +12,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'curl -sL https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh -o install_nvm.sh'
-                sh 'bash install_nvm.sh'
-                sh 'nvm use'
                 sh 'npm install'
             }
         }
