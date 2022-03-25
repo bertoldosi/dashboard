@@ -14,9 +14,6 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Test') {
-            steps { }
-        }
         stage('Deploy') {
             steps {
                 sh 'vercel --prod'
