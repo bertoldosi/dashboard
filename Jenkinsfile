@@ -14,10 +14,13 @@ pipeline {
                 sh 'npm install'
             }
         }
-     stage('Exec app') {
-        steps {
-            sh 'npm run dev'
+        stage('Test') {
+            steps { }
         }
-    }
+        stage('Deploy') {
+            steps {
+                sh 'npm run dev'
+            }
+        }
     }
 }
