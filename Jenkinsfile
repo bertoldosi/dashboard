@@ -4,7 +4,7 @@ pipeline {
             image 'node:6-alpine'
             args '-p 3000:3000'
         }
-        tools {nodejs “v16.10.0”}
+        tools {nodejs “v16”}
     }
     environment {
         CI = 'true'
