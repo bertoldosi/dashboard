@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'vercel --prod'
+                echo 'deu certo'
             }
         }
     }
