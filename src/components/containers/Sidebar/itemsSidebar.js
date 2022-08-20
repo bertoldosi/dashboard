@@ -1,7 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 import {
   BiPieChart,
-  BsGraphUp,
   BsHouseDoor,
   BsBoxSeam,
   BiStats,
@@ -20,20 +19,6 @@ export default [
         title: "Dashboard",
         href: "/",
         icon: <BsHouseDoor />,
-        submenus: [],
-      },
-      {
-        id: "chart",
-        title: "Chart",
-        icon: <BsGraphUp />,
-        href: "/chart",
-        submenus: [],
-      },
-      {
-        id: "salesReport",
-        title: "Sales Report",
-        icon: <BiPieChart />,
-        href: "/sales-report",
         submenus: [],
       },
       {
