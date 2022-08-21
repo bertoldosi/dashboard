@@ -8,6 +8,7 @@ import {
   BiMessageDetail,
   MdTimeline,
 } from "@Icons";
+import { BsCartDash } from "react-icons/bs";
 
 export default [
   {
@@ -54,6 +55,14 @@ export default [
         title: "Tabela colapsável",
         icon: <BsTable />,
         href: "/collapsible-table",
+        submenus: [],
+      },
+
+      {
+        id: "controlCard",
+        title: "Controle de gastos",
+        icon: <BsCartDash />,
+        href: "/card-control",
         submenus: [],
       },
     ],
