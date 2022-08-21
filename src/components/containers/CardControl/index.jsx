@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "@Common/Card";
-import itemsTable from "./tableItems";
 
 import { Scontent, STable, STableCollapsed } from "./styles";
 import Thead from "./components/Thead";
@@ -9,8 +8,9 @@ import IconTable from "./components/IconTable";
 import ContentAmount from "./components/ContentAmount";
 import Header from "./components/Header";
 
-function CollapsibleTable() {
-  const { listTable, submenusExpanded } = useListCollapsibreTable(itemsTable);
+function CollapsibleTable({ monthly_expenses }) {
+  const { listTable, submenusExpanded } =
+    useListCollapsibreTable(monthly_expenses);
 
   return (
     <Card>

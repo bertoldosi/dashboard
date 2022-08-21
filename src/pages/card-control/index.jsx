@@ -1,5 +1,6 @@
 import BreadCrumbs from "@Common/BreadCrumbs";
 import ContainerCardControl from "@Containers/CardControl";
+import monthly_expenses from "./tableItems";
 
 function CardControl() {
   return (
@@ -8,7 +9,7 @@ function CardControl() {
         title="Controle de cartões"
         resumePage="Controle de gasto nos cartões"
       />
-      <ContainerCardControl />
+      <ContainerCardControl monthly_expenses={monthly_expenses} />
     </>
   );
 }
