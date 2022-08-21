@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Scontent = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction: column;
 `;
 
 export const STable = styled.table`

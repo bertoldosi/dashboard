@@ -6,6 +6,8 @@ import { Scontent, STable, STableCollapsed } from "./styles";
 import Thead from "./components/Thead";
 import useListCollapsibreTable from "@Hooks/useListCollapsibreTable";
 import IconTable from "./components/IconTable";
+import ContentAmount from "./components/ContentAmount";
+import Header from "./components/Header";
 
 function CollapsibleTable() {
   const { listTable, submenusExpanded } = useListCollapsibreTable(itemsTable);
@@ -13,6 +15,7 @@ function CollapsibleTable() {
   return (
     <Card>
       <Scontent>
+        <Header />
         <STable>
           <Thead listTitle={["Instituição", "Total", "Vencimento"]} />
           <tbody>
@@ -46,6 +49,8 @@ function CollapsibleTable() {
                             </tr>
                           ))}
                         </tbody>
+
+                        <ContentAmount />
                       </STableCollapsed>
                     </td>
                   </tr>
@@ -53,6 +58,8 @@ function CollapsibleTable() {
               </>
             ))}
           </tbody>
+
+          <ContentAmount />
         </STable>
       </Scontent>
     </Card>
