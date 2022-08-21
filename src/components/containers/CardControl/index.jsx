@@ -7,6 +7,7 @@ import useListCollapsibreTable from "@Hooks/useListCollapsibreTable";
 import IconTable from "./components/IconTable";
 import ContentAmount from "./components/ContentAmount";
 import Header from "./components/Header";
+import InputTable from "./components/InputTable";
 
 function CollapsibleTable({ monthly_expenses }) {
   const { listTable, submenusExpanded } =
@@ -43,9 +44,15 @@ function CollapsibleTable({ monthly_expenses }) {
                         <tbody>
                           {item.shopping.map((buy, i) => (
                             <tr key={i}>
-                              <td>{buy.description}</td>
-                              <td>{buy.amount}</td>
-                              <td>{buy.responsible}</td>
+                              <td>
+                                <InputTable value={buy.description} />
+                              </td>
+                              <td>
+                                <InputTable value={buy.amount} />
+                              </td>
+                              <td>
+                                <InputTable value={buy.responsible} />
+                              </td>
                             </tr>
                           ))}
                         </tbody>

@@ -66,7 +66,7 @@ export const STableCollapsed = styled.table`
       text-align: left;
 
       td {
-        padding: 1rem;
+        padding: 0 1rem;
         border: solid 1px ${(props) => props.theme.header_color};
 
         &:last-child {
