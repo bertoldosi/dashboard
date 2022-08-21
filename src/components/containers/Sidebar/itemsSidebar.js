@@ -1,6 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 import {
-  BiPieChart,
+  BsTable,
   BsHouseDoor,
   BsBoxSeam,
   BiStats,
@@ -47,6 +47,13 @@ export default [
         title: "Timeline",
         icon: <MdTimeline />,
         href: "/timeline",
+        submenus: [],
+      },
+      {
+        id: "collapsibleTable",
+        title: "Tabela colapsável",
+        icon: <BsTable />,
+        href: "/collapsible-table",
         submenus: [],
       },
     ],

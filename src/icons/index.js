@@ -11,6 +11,7 @@ export {
   BsGear,
   BsFillXCircleFill,
   BsHouseDoor,
+  BsTable,
 } from "react-icons/bs";
 
 export { FaSearch, FaHandHoldingUsd } from "react-icons/fa";
